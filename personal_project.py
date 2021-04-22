@@ -98,9 +98,9 @@ from email.utils import formatdate
 from email import encoders
 
 msg = MIMEMultipart()
-send_from = msg['From'] = 'cognitivemashup@gmail.com'
-PASSWORD = "Lilyismydog10"
-send_to = msg['To'] = 'sandra.machon@kindle.com' # Can be 'Send to Kindle' email
+send_from = msg['From'] = 'xxxxxxxxx@gmail.com'
+PASSWORD = "xxxxxxxx"
+send_to = msg['To'] = 'xxxxxxxx@kindle.com' # Can be 'Send to Kindle' email
 msg['Date'] = formatdate(localtime=True)
 msg['Subject'] = fileName + ".mobi"
 
