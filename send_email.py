@@ -7,9 +7,9 @@ from email import encoders
 
 def send_to_kindle(file_name): 
     msg = MIMEMultipart()
-    send_from = msg['From'] = 'cognitivemashup@gmail.com'
-    PASSWORD = "Lilyismydog10"
-    send_to = msg['To'] = 'sandra.machon@kindle.com' # Can be 'Send to Kindle' email
+    send_from = msg['From'] = 'xxxxxxxxx@gmail.com'
+    PASSWORD = "xxxxxxxx"
+    send_to = msg['To'] = 'xxxxxxxxx@kindle.com' # Can be 'Send to Kindle' email
     msg['Date'] = formatdate(localtime=True)
     msg['Subject'] = "Latest articles from kdnuggets"
     fp = open(file_name, "rb")
