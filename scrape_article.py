@@ -8,15 +8,7 @@ import pdfkit #requires pip install pdfkit as well as https://wkhtmltopdf.org/do
 SITE = "https://www.kdnuggets.com/news/index.html"
 HDR = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A'}
 ABSOLUTE_PATH = "https://www.kdnuggets.com"
- 
-# Utility function
-'''def convert_html_to_pdf(source_html, output_filename): 
-    result_file = open(output_filename, "w+b") # open output file for writing (truncated binary) 
-    pisa_status = pisa.CreatePDF(    # convert HTML to PDF
-            source_html,                # the HTML to convert
-            dest=result_file)           # file handle to recieve result  
-    result_file.close()                 # close output file
-    return pisa_status.err  # return False on success and True on errors'''
+
 
 def get_article_to_content(url):
     article_page = urlopen(Request(url, headers = HDR))
@@ -48,11 +40,4 @@ def scrape_articles(articles_info, file_name):
     }
     pdfkit.from_string(pdf_content, file_name, options = options)
 
-# to test internally
-'''temp_url_list = [
-  "https://www.kdnuggets.com/2021/03/mongodb-icloud-solutions-2021.html",
-  "https://www.kdnuggets.com/2021/03/overview-mlops.html",
-  "https://www.kdnuggets.com/2021/03/multilingual-clip--huggingface-pytorch-lightning.html"
-    ]
-scrape_articles(temp_url_list, 'DONE.pdf')'''
- 
+
