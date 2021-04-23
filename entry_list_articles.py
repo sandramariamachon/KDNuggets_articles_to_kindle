@@ -47,9 +47,6 @@ all_links = articles_holder.find_all("li")
 all_dates = articles_holder.find_all("font")
 
 
-#all_links[0].a['href'] //article link
-#print(all_links[0].a.b.get_text()) //article title
-
 index = 0
 list_of_urls = []
 for element in all_dates:
