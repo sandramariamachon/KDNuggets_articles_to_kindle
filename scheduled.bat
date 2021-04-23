@@ -1,1 +1,1 @@
-python entry_list_articles.py
+python scrape_send_final.py
