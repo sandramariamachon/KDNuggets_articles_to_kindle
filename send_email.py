@@ -28,11 +28,4 @@ def send_to_kindle(file_name):
         server.close()
         print( 'successfully sent the mail' )
     except Exception as e:
-        print( e)
-
-    """<b>For the next time:</b> 
-    -Figure out how to send a nicer formed mobi (with pictures, title,bold abstract and meta data)
-    -Figure out how to set up a server which will update the articles and send it once week
-    -Figure out if you want to use another url
-    😎
-    """
+        print(e)
